@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .normal {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            border-radius: 15px;
+            border: 1px solid pink;
+            text-align: center;
+        }
+        .change {
+            background-color: black;
+            color: white;
+            width: 300px;
+            height: 300px;
+            border-radius: 15px;
+            border: 1px solid pink;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="normal">请点击</div>
+<script>
+    var div=document.querySelector('div');
+    var open=true;
+    div.onclick=function (){
+        if(open===true){
+            /*通过修改元素的类名修改样式 可以大量修改*/
+            this.className='change';//让当前元素的类名改为change
+           // this.className='normal change'; 既保留原来的类名+新类名
+            open=false;
+        } else {
+            this.className='normal'
+            open=true;
+
+        }
+
+
+    }
+</script>
+
+</body>
+</html>

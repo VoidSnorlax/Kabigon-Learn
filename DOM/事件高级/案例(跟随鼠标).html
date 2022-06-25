@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            position: absolute;
+            top: 2px;
+        }
+    </style>
+</head>
+<body>
+<img src="鼠标.png" alt="">
+<script>
+    var pic=document.querySelector('img');
+    document.addEventListener('mousemove',function (e){
+        var x=e.pageX;
+        var y=e.pageY;
+        pic.style.left=x-30+'px';
+        pic.style.top=y-24+'px';
+
+
+    })
+</script>
+
+</body>
+</html>

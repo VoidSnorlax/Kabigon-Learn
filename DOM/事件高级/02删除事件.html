@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+  </style>
+</head>
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<script>
+    /*只显示一次*/
+    var div=document.querySelectorAll('div');
+    div[0].onclick=function (){//传统方法
+        alert('Hello');
+        div[0].onclick=null;//解绑事件
+    }
+    div[1].addEventListener('click',fn)//声明函数fn为鼠标点击事件
+        function fn(){
+            alert('你好');
+            div[1].removeEventListener('click',fn);
+        }
+
+
+</script>
+
+</body>
+</html>

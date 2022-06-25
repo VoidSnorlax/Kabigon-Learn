@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>传统注册</button>
+<button>监听注册</button>
+<script>
+    /*传统的注册 唯一性同一个事件只能添加一个*/
+    var btn=document.querySelectorAll('button');
+    /*事件监听注册*/
+    btn[1].addEventListener("click", function (){
+        alert('hello word');
+    })
+    btn[1].addEventListener("click", function (){
+        alert('你好世界');
+    })//同一个元素,同一个事件可以添加多个监听器
+</script>
+
+</body>
+</html>

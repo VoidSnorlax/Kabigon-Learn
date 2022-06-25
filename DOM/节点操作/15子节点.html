@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>我是div</div>
+<span>我是span</span>
+<ul>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是l</li>
+</ul>
+<script>
+    var ul= document.querySelector('ul');
+    var a=ul.childNodes//获取所有子节点
+    /*for(var i=0;i<a.length;i++){
+        if(ul.childNodes[i].nodeType===1){
+            console.log(ul.childNodes[i]);
+        }
+    }*/
+    console.log(ul.children);//直接获得元素节点没有文本节点
+
+
+
+    /*获取第一个和最后一个*/
+    console.log(ul.firstElementChild)//获取第一个子节点
+    console.log(ul.lastElementChild)//最后一个子节点
+    //这两个兼容很低
+    /*解决方案*/
+    console.log(ul.children[0])
+    console.log(ul.children[ol.children.length-1])//最后一个元素的索引号
+</script>
+
+</body>
+</html>

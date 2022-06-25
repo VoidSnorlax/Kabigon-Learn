@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+            width: 500px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td,
+        th {
+            border: 1px solid #333;
+        }
+
+        thead tr {
+            height: 40px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+<table cellspacing="0">
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>科目</th>
+        <th>成绩</th>
+        <th>操作</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+<script>
+    // 1.先去准备好学生的数据
+    var datas = [{
+        name: 'wth',
+        subject: 'JavaScript',
+        score: 100
+    }, {
+        name: 'wgy',
+        subject: 'JavaScript',
+        score: 98
+    }, {
+        name: '胖子',
+        subject: 'JavaScript',
+        score: 99
+    }, {
+        name: '老六',
+        subject: 'JavaScript',
+        score: 88
+    }, {
+        name: '菜🐕',
+        subject: 'JavaScript',
+        score: 0
+    }];
+    //创建行
+    var toby=document.querySelector('tbody');
+    for(var i=0;i<datas.length;i++){//行
+        var tr=document.createElement('tr');//创建行
+        toby.appendChild(tr);//将行插入到表格里
+        //创建单元格
+        for(var b in datas[i]){//遍历对象 datds[i]==第几个对象
+            var td=document.createElement('td');
+            td.innerHTML=datas[i][b];//将数据插入到单元格
+            tr.appendChild(td);
+        }
+        var tdd=document.createElement('td');//创建删除单元格
+        var tff=document.createElement('td');//创建删除单元格
+        tr.appendChild(tdd);
+        tr.appendChild(tff);
+        tdd.innerHTML='<a href="javascript:;">删除</a>';//创建标签(元素)
+        tff.innerHTML='<a href="javascript:;">操作</a>';
+    }
+    var a=document.querySelectorAll('a');//给删除添加事件
+    for(var x=0;x<a.length;x++){
+        a[x].onclick=function (){
+            toby.removeChild(this.parentNode.parentNode);//删除
+            /*a的父亲是单元格a父亲的父亲才是行*/
+
+        }
+    }
+
+</script>
+</body>
+
+</html>

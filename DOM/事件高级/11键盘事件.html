@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        document.addEventListener('keyup',function (){
+            console.log('按一下');
+        })
+        document.addEventListener('keydown',function (){
+            console.log('按住');//先执行down
+        })
+        document.addEventListener('keypress',function (){//不能识别功能键
+            console.log('按住a');
+        })
+</script>
+
+</body>
+</html>

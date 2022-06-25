@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>123</div>
+<a href="https://www.baidu.com/index.php?tn=98012088_16_dg">百度</a>
+<script>
+    var div=document.querySelector('div');
+    div.addEventListener('click',fn);
+    div.addEventListener('mouseout',fn);
+    div.addEventListener('mouseleave',fn);
+    function fn(e){
+        console.log(e.type);//返回事件类型
+    }
+    //阻止默认行为
+    var a=document.querySelector('a');
+    a.addEventListener('click',fn);
+    function fn(e){
+        e.preventDefault();//阻止默认行为,不在跳转
+    }
+    
+</script>
+
+</body>
+</html>

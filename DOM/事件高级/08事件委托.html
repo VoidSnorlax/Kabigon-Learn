@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<script>
+    var ul=document.querySelector('ul');
+    ul.addEventListener('click',function (e){//给父级绑定对象,通过事件冒泡完成自己绑定
+        alert('1');
+        console.log(this);
+        console.log(e.target);
+    })
+</script>
+</body>
+</html>

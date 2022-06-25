@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      div {
+        width: 200px;
+        margin: 100px auto;
+        position: relative;
+      }
+      .message {
+        display: inline-block;
+        font-size: 12px;
+        color: #999999;
+        position: absolute;
+        top: -9px;
+        right: -107px;
+        background: url("img/感叹号.png") no-repeat left center;
+        padding-left: 20px;
+        margin-top: 14px;
+      }
+      .worng {
+          color: red;
+          background: url("img/感叹号red.png")no-repeat left center;
+      }
+      .yes {
+          color: chartreuse;
+          background: url("img/对勾.png") no-repeat left center;
+      }
+
+    </style>
+</head>
+<body>
+<div class="regrster">
+  <input type="password" class="ipt">
+  <p class="message">请输入6~10位密码</p>
+</div>
+<script>
+    var input=document.querySelector('input');
+    var p=document.querySelector('p');
+    input.onfocus=function (){
+        if(input.value.length===0){
+            p.className='message';
+            p.innerHTML='请输入6~10位密码';
+        }
+    }
+    input.onblur=function (){
+        if(this.value.length<=6 || this.value.length>=10){
+            p.className='message worng';
+            p.innerHTML='请输入正确密码';
+        }else {
+            p.innerHTML='正确';
+            p.className='message yes';
+
+        }
+    }
+
+</script>
+
+</body>
+</html>

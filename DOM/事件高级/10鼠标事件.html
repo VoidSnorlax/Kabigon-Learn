@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    document.addEventListener('click',function (e){
+        console.log(e);
+        console.log(e.clientX);
+        console.log(e.clientY);//鼠标在可视区的坐标 不被滚动条影响,永远都是距离浏览器导航栏的距离
+        console.log(e.pageX);
+        console.log(e.pageY);//受滚动条影响
+    })
+</script>
+
+</body>
+</html>

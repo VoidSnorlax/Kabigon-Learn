@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {}
+    </style>
+</head>
+<body>
+<button id="liu">刘德华</button>
+<button id="zhang">张学友</button>
+<img src="../img/5.webp" title="刘德华">
+<script>
+    var l=document.getElementById('liu');
+    var z=document.getElementById('zhang');
+    var img=document.querySelector('img');
+    z.onclick=function (){
+        img.src='img/liu.webp';
+        img.title='张学友';
+    }
+    l.onclick=function (){
+        img.src='img/5.webp';
+        img.title='刘德华';
+    }
+</script>
+
+</body>
+</html>

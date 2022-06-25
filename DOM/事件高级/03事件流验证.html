@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .fateher {
+      width: 400px;
+      height: 400px;
+      background-color: pink;
+      position: relative;
+        margin: 100px auto;
+    }
+    .son {
+      width: 200px;
+      height: 200px;
+      background-color: powderblue;
+        position: absolute;
+        left: 50%;
+        bottom: 50%;
+        margin-left: -100px;
+        margin-bottom: -100px;
+        text-align: center;
+        line-height: 200px;
+    }
+  </style>
+</head>
+<body>
+<div class="fateher">
+  <div class="son">box</div>
+</div>
+<script>
+    var fat=document.querySelector('.fateher');
+    var son=document.querySelector('.son');
+ /*   son.addEventListener('click',function (){//捕获流从上往下根据dom树
+        alert('son');
+    },true)
+    fat.addEventListener('click',function (){
+        alert('father');
+    },true)*/
+    son.addEventListener('click',function (){//冒泡流从下往上根据dom树 冒泡流参数为false或者不写
+        alert('son');
+    },false)
+    fat.addEventListener('click',function (){
+        alert('father');
+    },false)
+</script>
+
+</body>
+</html>

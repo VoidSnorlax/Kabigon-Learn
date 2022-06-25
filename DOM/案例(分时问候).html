@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<img src="img/desktop_4.jpg" alt="">
+<div>上午好</div>
+<script>
+    var img=document.querySelector('img');
+    var div=document.querySelector('div');
+    var date=new Date();
+    var h=date.getHours();
+    if(h<12){
+        img.src="img/desktop_4.jpg";
+        div.innerText='上午好';
+    }else if(h<18) {
+        img.src='img/desktop_5.jpg';
+        div.innerText='下午好';
+    }else {
+        img.src='img/desktop_8.jpg';
+        div.innerText='晚上好';
+    }
+</script>
+
+</body>
+</html>

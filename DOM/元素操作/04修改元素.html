@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div,p {
+
+            height: 25px;
+            margin-top: 2px;
+
+        }
+    </style>
+</head>
+<body>
+<button>显示系统时间</button>
+<div>某个时间</div>
+<p></p>
+<script>
+    var btn=document.querySelector('button');
+    var div=document.querySelector('div');
+    btn.onclick=function (){
+        div.innerText=Day();//innerText 不识别HTML的标签
+    }
+    function Day(){
+        var date=new Date();
+        var a={
+            0:'周日',
+            1:'周一',
+            2:'周二',
+            3:'周三',
+            4:'周四',
+            5:'周五',
+            6:'周六'
+        }//通过哈希表建立对应关系
+        var date1=date.getDay();
+        return date.getFullYear()+'年'+Number(date.getMonth()+Number(1))+'月'+date.getDate()+a[date1];
+    }
+    //不用操作事件
+        var p=document.querySelector('p');
+        p.innerText=Day();
+</script>
+
+</body>
+</html>

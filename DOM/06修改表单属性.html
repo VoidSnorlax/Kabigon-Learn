@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>按钮</button>
+<input type="text" value="输入内容">
+<script>
+    var btn=document.querySelector('button');
+    var input=document.querySelector('input');
+    btn.onclick=function (){
+        input.value='被点击';
+        this.disabled=true;//禁用按钮
+    }
+</script>
+
+</body>
+</html>

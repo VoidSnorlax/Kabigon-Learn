@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: wheat;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>2</li>
+    <li>21</li>
+    <li>12</li>
+</ul>
+<div>123</div>
+<script>
+    //区别 this指向的是绑定事件的对象(绑谁是谁) event.target是触发事件的对象(点谁是谁)
+    var ul=document.querySelector('ul');
+    ul.addEventListener('click',function (e){
+        console.log(this);//给ul绑定对象,点击li this->ul而不是li
+        console.log(e.target);//指向的是li,因为点击的是li
+    })
+    var div =document.querySelector('div');
+    div.addEventListener('click',function (e){
+        console.log(e.target);
+    })
+
+</script>
+</body>
+</html>

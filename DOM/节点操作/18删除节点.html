@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>Del</button>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<script>
+    var ul=document.querySelector('ul');
+    var li=document.querySelectorAll('li');
+    var btn=document.querySelector('button');
+    //ul.removeChild(ul.children[0]);
+    btn.onclick=function (){
+        if(ul.children.length===0){//当ul所有的孩子节点都没有了
+            this.disabled=true;//按钮不能按下
+        } else {
+            ul.removeChild(ul.children[0]);
+        }
+    }
+</script>
+
+</body>
+</html>

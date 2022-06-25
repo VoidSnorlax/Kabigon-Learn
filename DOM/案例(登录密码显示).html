@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            width: 400px;
+            border-bottom: 1px solid pink;
+            margin: 100px auto;
+            position: relative;
+        }
+        input {
+            width: 370px;
+            height: 30px;
+            border: 0;
+            outline: none;
+        }
+        .box img {
+            position: absolute;
+            margin-right: 10px;
+            top: 2px;
+            right: 2px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="box">
+    <label><img src="img/3D眼镜.png"></label>
+    <input type="password">
+    <script>
+        var label=document.querySelector('img');
+        var input=document.querySelector('input');
+        var flab=0;
+        label.onclick=function () {
+            if(flab==0){
+                input.type='text';
+                label.src='img/睁眼.png';
+                flab++;
+            }else {
+                input.type='password';
+                label.src="img/3D眼镜.png";
+                flab--;
+            }
+
+        }
+    </script>
+</div>
+
+</body>
+</html>

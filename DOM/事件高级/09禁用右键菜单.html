@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+隐秘文字
+<script>
+    /*禁用右键菜单*/
+    document.addEventListener('contextmenu',fn);//contextmenu右键菜单
+    function fn(e){
+        e.preventDefault();
+    }
+    /*禁止选中*/
+    document.addEventListener('selectstart', function(e){
+        e.preventDefault();
+    })
+</script>
+
+</body>
+</html>

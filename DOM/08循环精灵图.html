@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    .box {
+      width: 250px;
+      margin: 100px auto;
+    }
+
+    .box li {
+      float: left;
+      width: 24px;
+      height: 24px;
+      background-color: pink;
+      margin: 15px;
+      background: url(img/sprite.png) no-repeat;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<script>
+  var li=document.querySelectorAll('li')//获取全部
+  for(var i=0;i<li.length;i++){
+    var index=i*44;
+    li[i].style.backgroundPosition='0 -'+index+'px';
+  }
+</script>
+
+</body>
+</html>

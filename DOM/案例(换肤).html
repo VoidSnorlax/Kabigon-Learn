@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body {
+            background:url("img/1.jpg") no-repeat center top;
+            background-size: cover;
+        }
+        .skin {
+            position: absolute;
+            top: 100px;
+            right: 779px;
+            width: 410px;
+            background-color: white;
+            padding-top: 4px;
+            padding-right: 3px;
+            border-radius: 6px;
+        }
+        .mouse {
+            width: 410px;
+            height: 200px;
+            margin: 10px auto;
+            background-color: pink;
+            border-radius: 15px;
+        }
+
+        li {
+            float: right;
+            margin: 0 1px;
+
+
+        }
+        ul li img {
+            width: 100px;
+            cursor: pointer;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<ul class="skin">
+    <li><img src="img/1.jpg"></li>
+    <li><img src="img/2.jpg"></li>
+    <li><img src="img/3.jpg"></li>
+    <li><img src="img/4.jpg"></li>
+</ul>
+<script>
+    var b=document.querySelector('body');
+    var img=document.querySelectorAll('img');
+    for (var i=0;i<img.length;i++){
+        img[i].onclick=function (){
+            document.body.style.backgroundImage='url('+this.src+')';
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

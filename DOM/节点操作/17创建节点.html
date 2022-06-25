@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>123</li>
+</ul>
+<script>
+    //1.创建节点 添加元素
+    var li=document.createElement('li');
+    var ul=document.querySelector('ul');
+    //插入节点node.appendChild()
+    ul.appendChild(li);//在后面追加元素 类似数组push
+    ul.insertBefore(li,ul.lastChild);
+</script>
+
+</body>
+</html>

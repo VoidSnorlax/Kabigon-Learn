@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>按钮1</button>
+<button>按钮2</button>
+<button>按钮3</button>
+<button>按钮4</button>
+<button>按钮5</button>
+<script>
+    var bun=document.getElementsByTagName('button');//兼容问题 等于 querySelectorAll
+    //bun是伪数组
+    /*排他思想*/
+    //让某一个元素显示样式
+    for(var i=0;i<bun.length;i++){
+        bun[i].onclick=function (){
+            for (var i=0;i<bun.length;i++){
+                bun[i].style.backgroundColor='';//先干掉其他的按钮
+            }
+            this.style.backgroundColor='pink';//设置自己
+        }
+
+    }
+
+</script>
+</body>
+
+</html>

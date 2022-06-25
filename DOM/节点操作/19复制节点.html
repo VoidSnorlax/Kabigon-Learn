@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <!--克隆节点-->
+</head>
+<body>
+<ul>
+  <li>1</li>
+  <li>23</li>
+  <li>3</li>
+</ul>
+<script>
+  var ul=document.querySelector('ul');
+  //语法:node.cloneNode() 如果参数为空或者为false 即为浅拷贝 只克隆标签不可隆内容 深拷贝是复制节点和内容
+  var li=ul.children[0].cloneNode(true);//克隆ul的第一个li
+  ul.appendChild(li);//插入到哪
+</script>
+
+</body>
+</html>

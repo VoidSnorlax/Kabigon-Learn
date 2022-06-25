@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+<input type="text" placeholder="请输入">
+<script>
+    var input=document.querySelector('input');
+    input.onfocus=function (){//得到焦点
+       // console.log('得到焦点');
+        if(this.placeholder==='请输入'){
+            this.placeholder='';
+        }
+        this.style.color='#333';
+    }
+    input.onblur=function (){//失去焦点
+        if(this.placeholder===''){
+            this.placeholder='请输入';
+        }
+        /*console.log('失去焦点');*/
+    }
+</script>
+
+</body>
+</html>

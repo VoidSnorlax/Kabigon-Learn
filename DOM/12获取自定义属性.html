@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="demo" index="1"></div>
+<script>
+
+    var div =document.querySelector('#demo');
+    console.log(div.id);
+    console.log(div.getAttribute('id'));
+    //getAttribute可以获得程序员自己添加的属性
+    console.log(div.getAttribute('index'));
+    div.id='test';//更改属性值
+    div.setAttribute('index',2);
+    console.log(div.getAttribute('index'));
+    div.removeAttribute('index');
+
+</script>
+
+</body>
+</html>
