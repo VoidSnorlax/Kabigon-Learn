@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*js 数据类型 USONB
+    *            U undefined
+    *            S string symbol
+    *            O object
+    *            N null number
+    *            B boolean
+    *   */
+    //创建symbol
+    let s=Symbol();
+    console.log(s ,typeof s);
+    let s1=Symbol('金奎小区');
+    let s2=Symbol('金奎小区');
+    console.log(s1===s2);
+    let s4=Symbol.for('金奎小区');
+    let s5=Symbol.for('金奎小区');//函数对象
+    console.log(s5===s4);//相等
+    let leavel=Symbol('LEAVEL');
+    //Symbol不能运算
+    const GANE={
+        name:'hapi',
+        [leavel]:'baigei',//Symbol声明的无法被for in 变量
+        /*可以简写*/
+        [Symbol('level')]:'fine',
+
+        [Symbol('go')]: function (){
+            console.log('go');
+        }
+
+    }
+    for(let pro in GANE){
+        console.log(pro);
+    }
+    console.log(GANE[leavel]);
+
+</script>
+
+</body>
+</html>

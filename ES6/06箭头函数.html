@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作为方法的箭头函数this指向全局window对象</title>
+</head>
+<body>
+<script>
+  //箭头函数 =>
+  let fn=(a,b)=>{
+      return a+b;
+  }
+  console.log(fn(1,2));
+//1.静态this
+  let FN=function (){
+      console.log(this.name);
+  }
+
+  let ap=(name)=>{
+      console.log(this.name);
+  }
+  window.name=`锦葵小区`;
+  ap('baga');
+  const home={
+      name:'金奎小区'
+  }
+  FN.call(home);//非箭头函数,this谁调用指向谁,home调用,输出home里面的name
+ // ap.call(home);//箭头函数,this静态,指向作用域的this值(this值为全局变量name'锦葵小区')
+
+  //2.箭头函数不能构造函数
+  //3.不能使用argunments
+  //4.当形参只有一个的时候可以省略
+  let num=n=>{
+      return n+n;
+  }
+  console.log(num(1));
+  //5.当函数只有一条执行语句时可以省略{},return也必须省略,直接写返回式
+  let count=n => n*n
+  console.log(count(3));
+
+</script>
+
+</body>
+</html>

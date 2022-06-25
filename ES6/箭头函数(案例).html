@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .clory {
+            width: 200px;
+            height: 200px;
+            background-color: plum;
+        }
+    </style>
+</head>
+<body>
+<div class="clory"></div>
+<script>
+    let clory=document.querySelector('.clory');
+    clory.addEventListener('click',function (){
+        setTimeout(()=>{
+            this.style.backgroundColor='pink';//通过箭头函数的this直接指向作用域下的clory.
+        },2000);
+    });
+    const a=[1,2,3,4,5,6];
+    const num=a.filter(items => items%2===0);
+    console.log(num);
+</script>
+
+</body>
+</html>

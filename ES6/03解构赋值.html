@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const PEOPLE={
+        name:'wth',
+        age:'18',
+        work: function (){
+            console.log('sleep');
+        }
+    }//创建对象
+    let {name,age,work}=PEOPLE;//将对象解构
+    console.log(name);
+    console.log(age);
+    work();//通过结构之后可以重复的直接使用对象里面的函数
+</script>
+
+</body>
+</html>

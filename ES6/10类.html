@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Cat{
+        constructor(name,age) {
+            /*定义属性*/
+            this.name=name;
+            this.age=age;
+        }
+        eat() {
+            /*定义方法*/
+            console.log('eat');
+        }
+    }
+    let cat=new Cat('miao',2);
+    Cat.prototype.go=function (){//通过 类名.prototype可以修改类
+        console.log('run');
+    }
+    cat.eat();
+    cat.go();
+</script>
+
+</body>
+</html>

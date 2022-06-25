@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  /*ES6允许在大括号里面直接写入变量和函数,作为对象的属性和方法*/
+  let home='金奎小区';
+  function fn(){
+      console.log('住着一群吊猫');
+  }
+  const XUZHU={
+      home,
+      fn,
+      improve(){
+          console.log('天天不打扫卫生');
+      }
+  }
+  console.log(home);
+  fn();
+  console.log(XUZHU);
+</script>
+
+</body>
+</html>

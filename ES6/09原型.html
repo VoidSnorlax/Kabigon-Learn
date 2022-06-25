@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //任何一个对象都有原型
+  function cat(name,age){
+      this.name=name;
+      this.age=age;
+  }
+  let CAT=new cat('wth',2);
+  cat.prototype.eat=function (){
+      /*通过prototype获取原型*/
+      console.log('eat');
+  }
+  CAT.eat();
+
+</script>
+
+</body>
+</html>

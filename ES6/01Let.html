@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Let</title>
+</head>
+<body>
+<script>
+    /*1.声明变量*/
+    let a;
+    let b,c,d;
+    let e=100;
+    let f=521, g='wawaw',h=[];
+
+    /*2.不能重复声明*/
+    //let name='胖子';
+    //let name='wgy';
+
+    /*3.块级作用域*/
+    {
+        let girl='哈皮';
+    }
+   // console.log(girl);//无法打印作用域块的变量
+
+    /*4.不存在变量提升*/
+    console.log(age);//先打印
+    var age=18;//在声明
+    /*变量提升*/
+    //let不允许提升
+
+    /*5.不影响作用域链*/
+    {
+        let school='科文';
+        function sc(){
+            console.log(school);//
+        }
+        sc();
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const arry=[1,2,3445,5];
+    const PEOPLE={
+        name:'哈皮',
+        age:11
+    }
+    console.log(PEOPLE[Symbol.iterator]);//没有Symbol.iterator属性
+    console.log(arry[Symbol.iterator]);//有Symbol.iterator
+    for(let pro of arry){
+        console.log(pro);
+    }//含有Symbol.iterator属性的可以被for of 变量
+</script>
+
+</body>
+</html>
