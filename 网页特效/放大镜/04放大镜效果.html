@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            border: 2px black solid;
+            margin: 30px auto;
+            position: relative;
+            left: -174px;
+            background: url("s3.png");
+        }
+        .cover {
+            width: 300px;
+            height: 300px;
+            background-color: rgba(252,230,202,0.2);
+            position: absolute;
+            display: none;
+            left: 0px;
+            top: 0px;
+        }
+        .big {
+            display: none;
+            position: absolute;
+            left: 1200px;
+            top: 0px;
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+        }
+        .big img{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="cover"></div>
+</div>
+<div class="big">
+    <img src="big.jpg" class="bigp">
+</div>
+<script>
+    var cover =document.querySelector('.cover');
+    var box=document.querySelector('.box');
+    var big=document.querySelector('.big');
+    var bigp=document.querySelector('.bigp');
+    box.addEventListener('mouseover',function (e){
+        cover.style.display='block';
+        big.style.display='block';
+    })
+    box.addEventListener('mouseout',function (){
+        cover.style.display='none';
+        big.style.display='none';
+    })
+    box.addEventListener('mousemove',function (e){//鼠标在大盒子移动
+        var x=e.pageX-this.offsetLeft;//鼠标的位置-大盒子的位置=小盒子移动的位置
+        var y=e.pageY-this.offsetTop;
+        var MaxX=box.offsetWidth-cover.offsetWidth;//正方形宽高一致=小图片移动距离
+        Y=y-150;//-150是盒子高度的一半和宽度的一般就可以让鼠标在中间
+        X=x-150;
+        if(X<=0){
+            X=0;
+        }else if(X>=MaxX){
+            X=100;
+        }
+        if(Y<=0){
+            Y=0;
+        }else if(Y>=MaxX){
+            Y=100;
+        }
+        /*限制模态框跑出盒子*/
+        cover.style.top=Y+'px';//图片移动距离
+        cover.style.left=X+'px';
+        console.log(x,y);
+        /*大图片移动的距离是小图片的等比移动*/
+        var bigMax=big.offsetWidth-bigp.offsetWidth;//大图片最大移动
+        var bigx=X*bigMax/MaxX;//大图片的移动距离
+        var bigy=Y*bigMax/MaxX;
+        bigp.style.left=bigx+'px';
+        bigp.style.top=bigy+'px';
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: blueviolet;
+        }
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: darkturquoise;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+  <div class="son"></div>
+</div>
+<script>
+    var father=document.querySelector('.father');
+    var son=document.querySelector('.son');
+    father.addEventListener('mouseover',function (){
+        console.log('11');
+    })/*mouseover会出现事件冒泡,子盒子也会触发事件
+        mouseenter阻止冒泡事件,子盒子不会触发*/
+</script>
+
+</body>
+</html>

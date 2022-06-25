@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    div {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 0;
+        background-color: powderblue;
+    }
+    span {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        left: 0;
+        top: 200px;
+        background-color: navajowhite;
+
+    }
+  </style>
+</head>
+<body>
+<button>启动胖子</button>
+<div></div>
+<span>胖子勇敢勇敢我的朋友</span>
+<script>
+    var div=document.querySelector('div');
+    /*
+    var time=setInterval(function (){//通过定时器让盒子移动
+        if(div.offsetLeft>=400){//超过浏览器边界
+            clearInterval(time)//停止定时器
+        }
+        div.style.left=div.offsetLeft+10+'px';
+    },30)
+    */
+    //封装函数
+    function animation(obj,target){
+        //解决不断点击按钮出现 移动过快的情况
+        clearInterval(obj.time);
+        obj.time=setInterval(function (){//通过定时器让盒子移动  obj.time经行性能优化,不在开辟新的内存空间
+            if(obj.offsetLeft>=target){//超过浏览器边界
+                clearInterval(obj.time)//停止定时器
+            }
+            obj.style.left=obj.offsetLeft+10+'px';
+        },30);
+    }
+    animation(div,600);
+    var btn=document.querySelector('button');
+    var span=document.querySelector('span');
+    btn.addEventListener('click',go);
+    function go(){
+        animation(span,600);
+    }
+</script>
+
+</body>
+</html>

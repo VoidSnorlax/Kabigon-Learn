@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: powderblue;
+      border: 10px black solid;
+      overflow: auto;/*滚动条*/
+    }
+  </style>
+</head>
+<body>
+  <div>
+    I AM BOX
+      I AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOXI AM BOX
+  </div>
+<script>
+    /*页面的滚动距离通过pageYOffset获得*/
+
+  var div=document.querySelector('div');
+  console.log(div.scrollHeight);//xx.scrollHeight 内容实际高度,不包含边框和单位
+  div.addEventListener('scroll',scrolltop)//给标签绑定滚动事件
+  function scrolltop(){
+      console.log(div.scrollTop);//打印346为 滚动条卷去的部分
+  }
+
+
+</script>
+
+</body>
+</html>

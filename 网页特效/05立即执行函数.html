@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>立即执行函数</title>
+</head>
+<body>
+<script>
+    function fn(){
+        console.log('hello');
+    }
+    fn();
+    /*正常创建函数需要调用*/
+
+    (function (){})();//立即执行函数.写法1
+        (function (){}());//立即执行函数.写法2
+    //test
+    (function (a){
+        console.log(a);
+        var num=10;
+    })(2)//第二个小括号可以看做调用函数,可以传递参数
+    /*立即执行函数不要调用
+    * 作用:
+    *     创建了一个独立作用域
+    *     里面所有的变量都是局部变量,不会有命名冲突*/
+</script>
+
+</body>
+</html>

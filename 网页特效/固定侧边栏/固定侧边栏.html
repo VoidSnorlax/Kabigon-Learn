@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .head {
+            width: 960px;
+            height: 400px;
+            margin: 20px auto;
+            background-color: lightblue;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .banner {
+            width: 960px;
+            height: 600px;
+            margin: 20px auto;
+            background-color: pink;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .boby {
+            width: 960px;
+            height: 900px;
+            margin: 20px auto;
+            background-color: plum;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .side {
+            width: 100px;
+            height: 200px;
+            border-radius: 10px;
+            background-color: powderblue;
+            position: absolute;
+            top: 464px;
+            left: 1790px;
+        }
+        .side span {
+            display: none;
+            text-align: revert;
+            position: absolute;
+            bottom: 27px;
+            left: 18px;
+        }
+    </style>
+</head>
+<body>
+<div class="side">
+    <span>返回底布</span>
+</div>
+
+<div class="head">
+    head区域
+</div>
+
+<div class="banner">
+    banner
+</div>
+
+<div class="boby">
+    boby区域
+</div>
+<script>
+    var side=document.querySelector('.side');
+    var span=document.querySelector('span');
+    var banner=document.querySelector('.banner');
+    var btop=banner.offsetTop;
+    var s=span.offsetTop;
+    document.addEventListener('scroll',function (){
+        if(window.pageYOffset>=btop){
+            span.style.display='block';
+            side.style.position='fixed';
+            side.style.top=s + 'px';
+        } else {
+            side.style.position='absolute';
+            span.style.display='none';
+            side.style.top=btop + 'px';
+        }
+    });
+
+</script>
+
+</body>
+</html>
