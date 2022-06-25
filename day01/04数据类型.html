@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript">
+    /*数据类型就是自变量类型
+    * 在JS中有6种数据类型
+    * String 字符串
+    * Number 数值
+    * Boolean 布尔值
+    * Null 空值
+    * Undefined 未定义
+    * Object 对象
+    * */
+    const str = "hello";
+    const str2 = "\"hello\"Ada";
+    const str3 = 'hello\t';
+    console.log(str);
+    console.log(str3);
+    /*可以使用\进行转义*/
+    /*\n表示换行*/
+    /*\t表示制表符*/
+    /*\\表示\*/
+  </script>
+  <script type="text/javascript">
+    /*在JS中所有的数值都是Number
+    * 包括整数小数浮点数*/
+    /*可以使用typeof检查一个变量的类型*/
+    var a = 123;
+    console.log(a);
+    console.log(typeof a);
+    /*
+    * Number.MAX_VALUE表示最大值
+    * Infinity 正无穷 a = Infinity ,能赋值
+    -Infinity 负无穷
+    */
+    console.log(Number.MAX_VALUE);
+    var b = Infinity;//Number类型
+    b = 'abc' * 'bca';
+    console.log(b);
+    //NaN 非法数字（Not A Number)
+    console.log(typeof b);
+    var c = 0.1 + 0.2;
+    /*如果使用JS进行浮点数运算可能会得到一个不精确的结果
+    * 所有不要使用JS进行精确度要求比较高的计算*/
+    console.log(c);
+  </script>
+  <script type="text/javascript">
+    /*Boolean 布尔值
+    * 真或者假*/
+    /*null(空值)表示一个为空的对象*/
+    var d = null;
+    console.log(typeof d);
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        /*创建对象的三种方式:
+        *   1.利用字面量创建对象
+        *   2.利用new object创建对象
+        *   3.利用构造函数创建对象*/
+        var obj={}//创建一个空对象
+        var message={
+            age:18,
+            name:'wth',
+            say:function (){
+                console.log('nihao ');
+            }
+        }
+        //里面的属性和方法采取键值对的形式
+        //方法是匿名函数
+        //调用对象
+        console.log(message.age);//对象名.属性名
+        console.log(message['age']);//对象名['属性名']
+        message.say()//调用方法
+    </script>
+</head>
+<body>
+
+</body>
+</html>

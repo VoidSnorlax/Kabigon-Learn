@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--日期对象是个构造函数必须用new-->
+  <script type="text/javascript">
+      var date=new Date();//使用Date()  如果不传入参数返回当前系统的当前时间
+      console.log(date);
+      /*传参
+      *     数字型 2022,10,1
+      *     字符串 ‘2022-10-1 8:8:8'*/
+      var date1=new Date(2019,10,1);
+      console.log(date1);//返回的是11月
+      var date2=new Date('2022-10-1 8:8:8');
+      console.log(date2);
+  </script>
+
+    <!--日期格式化-->
+
+    <script type="text/javascript">
+    var date=new Date();
+    console.log(date.getFullYear());//当前年份
+    console.log(date.getMonth()+1);//当前月份  注意:从(0-1)开始 要加一才能和当前匹配
+    console.log(date.getDay());//周日返回的是0
+    var a={
+        0:'周日',
+        1:'周一',
+        2:'周二',
+        3:'周三',
+        4:'周四',
+        5:'周五',
+        6:'周六'
+    }//通过哈希表建立对应关系
+    let date1=date.getDay();
+    console.log(date.getFullYear()+'年'+Number(date.getMonth()+Number(1))+'月'+' '+a[date1]);
+    </script>
+
+    <!--格式化时间-->
+
+    <script type="text/javascript">
+        var date=new Date();
+        console.log(date.getHours())//时
+        console.log(date.getMinutes())//分
+        console.log(date.getSeconds())//秒
+        var time=function (){
+            var date=new Date();
+            var h=date.getHours();
+            var H =h<10 ? '0'+h :h;//
+            var m=date.getMinutes();
+            var M=m<10 ? '0'+m:m;
+            var s=date.getSeconds();
+            var S=s<10 ? '0'+m :m;
+            return H+':'+M+':'+S;
+        }
+        console.log(time());
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--冒泡算法
+        1.交换变量
+        2.比较-->
+    <script type="text/javascript">
+        var num1=10;
+        var num2=20;
+        var temp;
+        temp=num1;
+        num1=num2;
+        num2=temp;
+        console.log(num1,num2);
+    </script>
+    <script type="text/javascript">
+        var arry=[5,4,6,3,7,2];
+        var temp;
+        for(var a=0;a<arry.length-1;a++){//决定遍历次数（不是遍历）
+            for(var b=0;b<arry.length-a-1;b++){//数组长度-遍历次数-1就是下标移动次数
+                if(arry[b]>arry[b+1]){
+                    temp=arry[b];
+                    arry[b]=arry[b+1];
+                    arry[b+1]=temp;
+                }
+            }
+            console.log('每'+Number(a)+'次遍历结果'+arry);
+
+
+        }
+        //console.log(arry);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

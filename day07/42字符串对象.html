@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--基本包装类型:把简单数据类型包装成复杂数据类型-->
+    <script type="text/javascript">
+    var str='';//每赋值一个字符串就会开辟一个新空间
+    console.log(str);
+
+    /*字符串的所有方法都不会修改字符串本身*/
+    var str1='abceofoxyooi';
+    //str.indexOf('要查找的字符',[起始位置])
+    //console.log(str1.indexOf('o',3));//从第三位开始查找
+    var b=str1.indexOf('o');
+    var i=0;
+    while (b!==-1){
+        console.log(b);
+        b=str1.indexOf('o',b+1);
+        i++;
+    }
+    console.log(i);
+    // for(var i=0;i<str1.length;i++){//找到字符串重复字符下标
+    //      var a=str1.indexOf('o',i);
+    //      if(a!==-1){
+    //          console.log(a);
+    //      }
+    //
+    // }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

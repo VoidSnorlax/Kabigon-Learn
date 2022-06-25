@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--翻转数据-->
+
+    <script type="text/javascript">
+        function fn(){
+            var newarr=[];
+            for(var a=arguments.length-1;a>=0;a--){
+                newarr+=arguments[a];
+            }
+            return newarr;
+        }
+        ;
+        console.log(fn(1,2,3,4));
+    </script>
+
+    <!--冒泡排序-->
+
+    <script type="text/javascript">
+        function bubbing(arr){
+            for(var a=0;a<arr.length-1;a++){//外侧循环控制数组遍历次数 (次数=长度-1)
+                for(var b=0;b<arr.length-a-1;b++){//内测循环控制数组下标移动次数,移动次数为长度-次数-1
+                    if(arr[b]>arr[b+1]){
+                        temp=arr[b];
+                        arr[b]=arr[b+1];
+                        arr[b+1]=temp;
+                    }
+                }
+            }
+            return arr;
+
+        }
+        var arry=bubbing([1,6,3,4,5]);
+        console.log(arry);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

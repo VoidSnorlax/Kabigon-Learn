@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var n1=10;
+        // var n2='aaaaa';//n2 =10
+        // var n3=n1+n2;//算数相加
+        n1+=10;//n1+=10 => n1=n1+10;
+        console.log(n1);
+    </script>
+
+    <!-- ++自增自减-- -->
+    <script type="text/javascript">
+        /*
+        * -对于一个变量自增之后，原变量会立即+1
+        * -无论是后++还是++前，原变量会立即+1
+        * -自减与之相反
+        * */
+        var a=1;
+        //a++;//后++ a++的值等于原变量自增前的值
+        //++a;//前++ ++a的值等于原变量自增后的值
+        console.log(++a);//1(自增前)
+        console.log(a);//2
+
+        /*Test*/
+        var d=20;
+        var x=d++;//将d++(20)的值赋予给x 不是d(21)的值赋予给x
+        console.log(x);
+        /*d++==20 => d==21 , ++d==22 d==22*/
+        var result=d++ + ++d +d;//64
+        console.log(result);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

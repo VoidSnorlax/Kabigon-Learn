@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var radom=function (min,max){
+            min=Math.ceil(min);
+            max=Math.floor(max);
+            return  Math.floor(Math.random()*(max-min+1))+min;//得到两个数之间(包含着两个数的随机数)
+        }
+        var a=radom(5,1);
+        console.log(a);
+        var input=prompt('请输入数字 1-5');
+        for(var i=1;i<=5;i++){
+            if(i==4&&Number(input)!=a){
+                alert('last chance')
+            }
+            if(Number(input)<a){
+                alert('so min');
+                input=prompt('请输入数字');
+            } else if(Number(input)>a){
+                alert('so max');
+                input=prompt('请输入数字');
+            }else {
+                alert('yes');
+                break
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

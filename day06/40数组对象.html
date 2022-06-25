@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //创建数组
+        var arr=new Array(2)//表示创建长度为2的数组
+        var arr1=new Array(2,3,4)//->var a=[2,3,4];
+        console.log(arr,arr1);
+        //判断数组
+        console.log(Array.isArray(arr));//Array.isArray()判断是否为数组
+        //反转数组
+        console.log(arr1.reverse());
+        //数组排序
+        console.log(arr1.sort());//sort是按照第一位排序
+        /*解决方案*/
+        var x=[1,22,44,4,6,88,999,1];
+        x.sort(function (a,b){
+            return a-b;//a-b升序 b-a降序
+        })
+        console.log(x);
+        //数组索引
+        var z=x.indexOf(1);//找到数组元素的索引号 它只返回第一个满足条件的索引。 如果找不到返回-1 .
+        console.log(z);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

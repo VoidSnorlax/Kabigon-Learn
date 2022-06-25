@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function hello(){
+    console.log('hello word');
+  }
+  hello.call();//通过call方法可以调用函数
+  function name(){
+      console.log(this.name);//this指向window
+  }
+  const CAT={
+      name:'pz'
+  }
+  name.call(CAT);//通过call可以改变this的指向(指向对象里的 name)
+</script>
+
+</body>
+</html>

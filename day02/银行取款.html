@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+      var shuru = prompt('操作:\n1.存钱\n2.取钱\n3.显示余额\n4.退出');
+      var qian =0;
+      var msg;
+      while (qian >= 0) {
+          if (Number(shuru) === 1) {
+              msg = prompt('存钱');
+              msg = parseInt(msg);
+              qian += msg;
+              alert('余额' + qian);
+              shuru = prompt('操作:\n1.存钱\n2.取钱\n3.显示余额\n4.退出');
+          }
+          if (Number(shuru) === 2) {
+               msg = prompt('取钱');
+              msg = parseInt(msg);
+              if (msg > qian) {
+                  alert('余额不足');
+              } else {
+                  qian -= msg;
+                  alert('余额' + qian);
+              }
+              shuru = prompt('操作:\n1.存钱\n2.取钱\n3.显示余额\n4.退出');
+          }
+          if (Number(shuru) ===3) {
+              alert('余额' + qian);
+              shuru = prompt('操作:\n1.存钱\n2.取钱\n3.显示余额\n4.退出');
+          }
+          if (Number(shuru) === 4) {
+              alert('再见');
+              shuru = false;
+              break;
+          } else {
+              alert('请输入正确选项');
+              shuru = prompt('操作:\n1.存钱\n2.取钱\n3.显示余额\n4.退出');
+          }
+      }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

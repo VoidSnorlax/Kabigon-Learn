@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--do whlie-->
+    <script type="text/javascript">
+        /*语法结构:
+        *   do{
+        *       //循环体
+        *   }whlie(条件表达式)
+        * 流程:
+        *   先执行循环体,在判断条件*/
+        /*continue关键字
+        * 流程:
+        *   continue跳出本次循环(不在执行continue下面的代码)
+        *   但是循环继续*/
+        // var i=1;
+        // do {
+        //     document.write('你好'+'</br>');
+        //     i++;
+        // }while (i<=100);
+
+
+        var b=0;
+        for(var a=1;a<=100;a++){
+            if(a%7==0){
+                continue;
+            }
+            b+=a;
+        }
+        document.write(b);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

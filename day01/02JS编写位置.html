@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!---可以将js代码编写到外部js文件中，然后通过Script标签引入
+         写道外部文件中可以在不同的页面中间引用(解耦)，也可以利用浏览器缓存机制
+     --->
+    <!--Script标签一旦用于引入外部文件，就不能在编写代码了-->
+     <script type="text/javascript" src="../JS/Script.js">
+         alert()
+
+
+     </script>
+</head>
+<body>
+     <!---可以将js代码编辑到onlick属性中---->
+     <button onclick="alert('你干嘛，我就问你你干嘛');">点我一下</button>
+     <!---可以将js写到超链接href属性之中--->
+     <a href="javascript:alert('阿吧阿吧')">点</a>
+
+     <a href="javascript:">点</a> <!---让超链接没有反应--->
+     <!----虽然可以写在标签属性中，但是他们属于结构耦合，不方便维护   不推荐使用---->
+
+
+</body>
+</html>

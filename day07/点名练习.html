@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点名</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var fun=function (a){
+
+            var i=getRandom(0,a.length-1);
+            console.log(a[i]);
+            a.splice(i,1);
+            console.log(a);
+
+
+
+        }
+
+
+
+
+    function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min
+    }
+    var arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操', 'pink老师']
+
+    fun(arr);
+
+  </script>
+</body>
+</html>

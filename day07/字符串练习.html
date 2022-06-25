@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    /*找出字符串中出现次数最多的字符和出现次数*/
+    var a='abcdeacsder';
+    var obj={};
+    for(var i=0;i<a.length;i++){
+        var b=a.charAt(i);
+        if(obj[b]){//意味着obj对象里由b属性
+            obj[b]++;
+        } else {
+            obj[b]=1;
+        }
+    }
+    var max=0;
+    var  k='';
+    console.log(obj);
+    for (let z in obj){
+        if(obj[z]>1){
+            console.log(obj[z]);
+            console.log(z);
+        }
+        if(max<obj[z]){
+            max=obj[z];
+            k+=z;
+        }
+    }
+/*    console.log(max);
+    console.log(k);*/
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

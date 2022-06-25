@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--遍历对象-->
+    <script type="text/javascript">
+        /*通过for in遍历对象
+        *   语法:
+        *       for(变量 in 对象){
+        *           console.log(变量);//打印键
+                    console.log(对象[变量]);//打印值
+        *       }*/
+        var message= [{
+            age: 18,
+            name: 'wth',
+        },{
+            age: 18,
+            name: 'wth',
+        }]
+        for(var k in message){
+            console.log(k);//打印键
+            console.log(message[k]);//打印值
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

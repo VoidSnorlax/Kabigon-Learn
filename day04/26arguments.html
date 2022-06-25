@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        /*arguments  只有函数才有arguments而且已经内置好了 使用*/
+        function fn(){
+            console.log(arguments);//arguments里面存储了所有传递过来的实参
+            console.log(arguments.length);
+        }
+        fn(1,2,3,4);
+        //arguments是一个伪数组
+        /*伪数组
+        *   1.具有数组的length属性
+        *   2.按照索引的方式存储
+        *   3.他没有数组的一些方法 pop(),push()*/
+    </script>
+
+    <!--Test任意数的最大值-->
+
+    <script type="text/javascript">
+        function fn(){
+            var max=arguments[0];
+            for(var i=0;i<arguments.length;i++){
+                if (max<arguments[i]){
+                    max=arguments[i];
+                }
+            }
+            return max;
+        }
+        console.log(fn(1,2,3,5,8,2));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

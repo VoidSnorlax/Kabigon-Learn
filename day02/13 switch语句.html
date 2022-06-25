@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--switch语句-->
+    <!--当代码要针对变量设置一下特定值的时候可以使用-->
+    <script type="text/javascript">
+        /* 语法:
+        *   switch(表达式){
+        *       case value1:
+        *           执行语句1;
+        *           break;
+        *       case value2:
+        *           执行语句2;
+        *           break;
+        *       case value3:
+        *           执行语句3;
+        *           break;
+        *       default:
+        *       执行最后语句;
+        *   }
+        *   用法（匹配）；
+        *   根据switch()里的语句找到对应的执行结果
+        *   然后执行,如果都没有匹配上就执行default语句
+        *   注:必须是完全匹配*/
+        var num=2;
+        switch (num){
+            case 1:
+                console.log('no');
+                break;
+            case 2:
+                console.log('yes');
+                break;//如果不加break会执行系一条语句;
+            default:
+                console.log('miao');
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+      /*1.构造函数
+      *     是一种特殊的函数,用来初始化对象,把对象中一些公共的方法抽取出来 ,封装到函数中
+      *     属性和方法前面必须添加this
+      *     是泛指的某一大类 类似class
+      *     对象是类的实例化
+      * 2.语法:
+      *     function 构造函数(){
+      *     this.属性名= 值;
+      *     this.方法=function (){
+      *
+      *     }
+      *     }
+      *必须使用 new 构造函数名 //调用构造函数*/
+      function People(age,name,sex){
+          this.age=age;
+          this.name=name;
+          this.sex=sex;
+          this.sing=function (song){
+              console.log(song);
+          }
+      }
+      var dage=new People(18,'wth','boy');
+      //构造函数不需要return就能返回结果
+      //对象是个引用类型,每个对象的内存地址都不一样
+      console.log(dage.age);
+      console.log(dage.name);
+      console.log(dage.sex);
+      dage.sing('海阔天空');
+  </script>
+</head>
+<body>
+
+</body>
+</html>

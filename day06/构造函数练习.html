@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+    function Dog(name,type,age,color){
+        this.name=name;
+        this.type=type;
+        this.age=age;
+        this.color=color;
+        this.skill=function(kill){
+            switch (kill){
+                case 'bark':
+                    return'汪汪';
+                case 'showfilm':
+                    return '演电影';
+            }
+
+        }
+
+    }
+    var keke=new Dog('可可','阿拉斯加',5,'black');
+    console.log(keke.skill('bark'));
+    console.log(keke);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

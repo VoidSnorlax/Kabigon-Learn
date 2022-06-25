@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--JS作用域:就是代码名字(变量)在某个范围内起作用和效果
+        目的是提高程序的可靠性减少命名冲突-->
+    <script type="text/javascript">
+       /* 1.两种作用域 全局作用域 局部作用域
+       *    1.1全局作用域:
+       *        作用于整个script标签和单独的js文件
+       *    1.2局部作用域:
+       *        作用于函数之中
+       *        例子:
+       *            function fn{
+       *                var a;//局部作用
+       *            }*/
+        var num=10;
+        function  fn(){
+            var num=20;
+            return num;
+        }
+
+       console.log(num);
+       console.log(fn());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

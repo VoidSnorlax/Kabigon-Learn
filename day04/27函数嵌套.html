@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function isLeap(year){
+            var day=29;//定义闰年天数
+            if(Number(year)%4==0&&Number(year)%100!=0 ||Number(year)%400==0){//进行判断
+                return day;//是闰年返回上面定义的天数
+            } else {//否则调用函数
+                return days();
+            }
+        }
+        function days(year){
+            var month1=28;
+            return month1;
+        }
+        var month=prompt('请输入年份');//提示用户输入年份
+        console.log(isLeap(month));//调用函数
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

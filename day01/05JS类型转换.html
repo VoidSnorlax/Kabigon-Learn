@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        /*
+        * 强制类型转换
+        * - 指将一个数据类型转化为其他数据类型
+        * - 类型转换是指，将其他的数据类型转换成 str bool Num
+        * 调用被转换数据的toString()方法,调用xxx的yyy()方法,就是xxx.yyy()
+        * */
+
+        // var a = 1234;
+        // var b =a.toString();//要有返回值
+        //该方法不会影响到原变量,他会将转化的结果返回
+        // console.log(b);
+        // console.log(typeof b);
+
+        /*这个方法不适用于null和undefined
+        由于这两个类型的数据中没有方法，所以调用toString()时会报错*/
+
+        var c =3333;
+        c=String(c);//调用String()函数
+        console.log(typeof c);
+        /*String()会将 - null=>'null'
+        *             - Undefined=>'Undefined'
+        * */
+    </script>
+
+    <script type="text/javascript">
+        /*
+        *-parseInt()
+        *-parseFloat()//对于非String使用会将其先转化为String然后在操作
+        *
+        *
+        * */
+        // var a= '123px';
+        // a=parseInt(a,10);//parseInt可以将字符串中有效的整数取出来,然后转换成Num,在后面加上参数，告诉浏览器转换的进制
+        // console.log(a);
+        var x='123.456px';
+        x=parseFloat(x);//parseFloat()parseInt可以将字符串中有效的浮点数取出来,然后转换成Num
+        console.log(x);
+    </script>
+
+    <script type="text/javascript">
+        var a=123
+        a=Boolean(a);//除了0和NaN都是true
+        console.log(typeof a);
+        console.log(a);
+        var p='aaaa';
+        p=Boolean(p);//字符串转除了空都是True
+        console.log(p);
+
+        /*
+        * 可以对任意数据类型经行两次非运算，即可转换为布尔值
+        * */
+        var n1=10;
+        var n2=!!n1;
+        console.log(n2);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

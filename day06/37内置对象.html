@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--三种对象
+        1.自定义对象
+        2.内置对象
+        3.web对象-->
+    <script type="text/javascript">
+        var radom=function (min,max){
+            min=Math.ceil(min);
+            max=Math.floor(max);
+            return Math.floor(Math.random()*(max-min+1))+min;//得到两个数之间(包含着两个数的随机数)
+        }
+        console.log(radom(5,1));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

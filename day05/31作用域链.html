@@ -1,0 +1,22 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--展示-->
+    <script type="text/javascript">
+        var num1=10;//局部变量10;
+        function fn(){
+            var num1=20;
+            function fun(){
+                console.log(num1);//fn函数的num1 20
+            }
+            fun();
+        }
+       fn();//作用域链:内部函数访问外部函数的变量,采取链式查找方式(就近原则)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var arry1=[2,6,1,77,52,25,7];
+        var max=arry1[0];//默认最大为第一位
+        for (var i=0;i<arry1.length;i++){//遍历数组
+            // if(max<arry1[i]){//如果默认值小于数组第[i]
+            //     max=arry1[i];//将大值赋给max
+            // }
+            var result=arry1[i]>max ?  max=arry1[i] : max;//三元运算符
+        }
+        // console.log(max);
+        console.log(result);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

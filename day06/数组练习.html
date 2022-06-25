@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!---->
+  <script type="text/javascript">
+      /*删除数组中大于200的数字，不生成新数组*/
+      var del=function (arr){
+          for(var i=0;i<arr.length;i++){
+              if(arr[i]>=200){
+                  var x=arr.indexOf(a[i]);
+                  arr.splice(x,1);
+                  i--;//解决数组塌陷问题
+              }
+          }
+          return arr;
+      }
+      var a=[150,120,200,180,210]
+      console.log(del(a));
+  </script>
+
+    <script type="text/javascript">
+        /*删除数组元素,生成新数组*/
+        var newarr=function (arr){
+            var newarr=[];
+            for(var i=0;i<arr.length;i++){
+                if(arr[i]<5){
+                    newarr.push(arr[i]);
+                }
+            }
+            return newarr;
+        }
+        var a=[1,2,3,4,5,6,7,8];
+        console.log(newarr(a));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

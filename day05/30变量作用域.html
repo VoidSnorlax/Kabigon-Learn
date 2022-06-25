@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        /* --全局变量和局部变量--*/
+        var num1=20;//全局变量
+        function fn(aru){//函数的形参也可以看作局部变量
+            num=10;//在函数内只赋值不声明也属于全局变量,可以在函数外调用
+            var num2=20;//局部变量
+            console.log(num1);//在函数内部也可以使用 20
+        }
+
+        //20
+        fn();
+        console.log(num);
+        /*---执行效率---
+        *    1.全局变量只有在浏览器关闭时才会销毁,比较占资源
+        *    2.局部变量 当我们程序执行完毕就会销毁,比较节约*/
+    </script>
+</head>
+<body>
+
+</body>
+</html>

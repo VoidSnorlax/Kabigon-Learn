@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    /*对于非布尔值的运算
+    * -会想将其转换成布尔值，然后在运算，并且返回后边的*/
+    var a=1&&2;
+    console.log(a);
+    /*与运算-如果两个都为true则返回后边的一个*/
+
+    var b=1||2;
+    console.log(b);
+    /*或运算-如果第一个值为true则直接返回第1个值
+    * 如果第一个为false则返回第二个值*/
+
+    /*对于非数值进行比较时，会将其转换成数字，在对其比较*/
+    console.log(1>true);//false 把true=1
+    console.log(1>=true);//true
+    console.log(10>'hello');//任何值和NaN进行比较都是false
+    console.log('1'>'2');//两个都是字符串（一位一位比较，如果两位一样就比较下一位，依次）就比较编码
+    //如果比较的两个都是字符串可能会出现不可预料的结果
+    //一定要转型
+  </script>
+</head>
+<body>
+
+</body>
+</html>

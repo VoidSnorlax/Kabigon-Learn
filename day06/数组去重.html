@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        /*数组去重*/
+        var unique=function (arr){
+            var newa=[];//创建一个空数组
+            for(var i=0;i<arr.length;i++){//遍历传入的数组
+                var a=newa.indexOf(arr[i]);//判断新数组里面有没有旧数组的元素
+                if(a===-1){//如果没有
+                    newa.push(arr[i]);//将元素写入新数组
+                }
+            }
+           return newa;
+        }
+        var a=[1,2,3,4,5,7,7,1,0,1];
+        console.log(unique(a));
+    </script>
+
+    <script type="text/javascript">
+        var z=[3,2,1,1,1,2];
+        var b=Array.from(new Set(z));//数组去重
+
+        console.log(b);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
