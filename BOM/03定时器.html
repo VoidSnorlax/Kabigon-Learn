@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /* setTimeout(调用函数{
+
+    },时间(毫秒))*/
+    //时间可以省略,省略默认是0
+  setTimeout(function (){
+      alert('爆炸');
+  },2000)
+    var fn=function (){  //调用函数可以直接写函数,也可以写函数名
+      alert('boom');
+    }
+    var time1=setTimeout(fn,4000);//页面中会有很多定时器,我们经常给定时器加标识符
+
+</script>
+
+</body>
+</html>

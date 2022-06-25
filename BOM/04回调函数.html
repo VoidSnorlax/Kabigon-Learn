@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            text-align: center;
+            line-height: 200px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div>广告</div>
+<script>
+    /*回调函数
+    * 需要等待时间,时间到了就执行*/
+    var div=document.querySelector('div');
+    var miss=function (){
+        div.style.display='none';
+    }
+    setTimeout(miss,5000);
+</script>
+</body>
+</html>

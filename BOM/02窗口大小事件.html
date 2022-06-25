@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<script>
+  window.addEventListener('load',function (){
+    var div =document.querySelector('div');
+
+    window.addEventListener('resize',function (){
+      if(window.innerWidth< 900 ){//当浏览器宽度小于900px的时候将盒子隐藏
+        //window.innerWidth浏览器宽度  window.innerHeight浏览器高度
+        div.style.display='none';
+
+      } else {
+        div.style.display='block';
+      }
+    })
+  })
+</script>
+<div></div>
+<script>
+ /* window.addEventListener('resize',function (){//浏览器发生大小改变就会出现 用于响应式布局
+    console.log('大小');
+  })*/
+</script>
+
+</body>
+</html>

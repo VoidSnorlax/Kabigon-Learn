@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+   
+    <script>
+        
+        window.onload = function () {//window.onload -> 当页面全部加载完之后调用 这种传统的注册方式只会以最后一个为准
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function () {
+                alert('点我');
+            })
+        }
+
+        window.addEventListener('load', function () {
+            alert(1)
+        })
+        document.addEventListener('DOMContentLoaded', function () {
+            alert(22);
+        })
+    /*load和DOMContentLoaded区别
+        * load会在整个浏览器加载完DOM和各种图片动画完之后执行
+        * DOMContentLoaded会在DOM加载完之后就执行,速度更快*/
+    </script>
+    <button>按一下</button>
+
+</body>
+
+</html>

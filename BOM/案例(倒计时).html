@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            margin: 200px;
+        }
+
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <span class="hour"></span>
+        <span class="minute"></span>
+        <span class="second"> </span>
+    </div>
+    <script>
+        var hour = document.querySelector('.hour');
+        var min = document.querySelector('.minute');
+        var second = document.querySelector('.second');
+        var inputime = +new Date('2022-10-1 20:00:00');
+        countDown();
+        setInterval(countDown, 1000);
+        function countDown() {
+            var now = +new Date();
+            var times = (inputime - now) / 1000;
+            var h = parseInt(times / 60 / 60 % 24);
+            var H = h < 10 ? '0' + h : h;//
+            hour.innerHTML = H;
+            var m = parseInt(times / 60 % 60);
+            var M = m < 10 ? '0' + m : m;
+            min.innerHTML = M;
+            var s = parseInt(times % 60);
+            var S = s < 10 ? '0' + s : s;
+            second.innerHTML = S;
+        }
+    </script>
+
+</body>
+
+</html>

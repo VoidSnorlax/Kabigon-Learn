@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>Stop</button>
+<script>
+    var btn=document.querySelector('button');
+    var boom=function (){
+        alert('Boom');
+    }
+    var time1=setTimeout(boom,5000);
+    btn.addEventListener('click',function (){
+        clearTimeout(time1);//清楚定时器 参数为定时器函数名
+    })
+</script>
+</body>
+</html>

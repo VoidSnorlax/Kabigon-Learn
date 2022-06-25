@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>点击</button>
+<script>
+    var btn=document.querySelector('button');
+    btn.addEventListener('click',function (){
+        //location.assign('https://www.baidu.com/');
+        //location.replace('https://www.baidu.com/');
+        /*二者都是转发,但是第二个不能后退,第一个可以*/
+        location.reload();//刷新
+    })
+</script>
+
+</body>
+</html>
